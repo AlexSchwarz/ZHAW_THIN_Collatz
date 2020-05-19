@@ -6,12 +6,10 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
         for(int i = 100; i <= 1000000; i++) {
-            int value = i;
+            int value = i, counter = 0;
             numbers.add(value);
-            int counter = 0;
             while (counter < 12) {
-                value = calc(value);
-                numbers.add(value);
+                numbers.add(value = calc(value));
                 counter++;
             }
             if(value == 1) {
